@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/29796258b5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--使用Jquery 都須先加上面這行，在這專案中用來驅動回到頁首的功能-->
+    <link rel="stylesheet" href="style_revised.css">
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico" /> <!--favicon-->
+    <title>Jason Shiu</title>
+
+    
+</head>
+<body>
+<!--======================= HEADER ======================-->
+    <header class="header">
+       <div class="logo" id="BackTop">Jason</div>
+       <nav>
+           <ul class="nav_link mx-auto">
+               <li> <a href="#term1">About Jason</a> </li>
+               <li> <a href="#term2">Experience</a> </li>
+               <li> <a href="#term3">Skills</a> </li>
+               <li> <a href="#term4">Porfolio</a> </li>
+               <li> <a href="#term5">Contact me</a> </li>
+           </ul>
+       </nav>
+
+       <div class="icon">
+       <a href="https://www.facebook.com/jason.hsu.3994" target="blank" ><i class="fab fa-facebook-square fa-2x"></i></a>
+       <a href="https://www.instagram.com/jasonhsu00011/" target="blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+       <a href="https://www.linkedin.com/in/%E8%A8%B1%E5%B1%95%E7%A6%8E-jason-73912916b/" target="blank"><i class="fab fa-linkedin fa-2x" ></i></a>
+       </div>
+    </header>
+
+    <!--======================= HOME ======================-->
+    <section class="home" >
+        <div class="home_row">
+            <div class="home_row_left">
+                <div class="home_row_left_content">
+                    <h2>Jason Shiu</h2>
+                    <h3>Frontend Developer /Website Designer</h3>
+                    <p>Your best solution of brand website for business promotion <br>
+                       My professional website building and marketing research </p>            
+                    <div class="button">
+                        <button>
+                            <a href="#term5">Contact me<i class="fas fa-paper-plane"></i></a>
+                        </button>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="home_row_right">
+                <img src="image/headshot.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+    <div id="term1"></div>
+<!--======================= ABOUT ======================-->
+    <section class="about">
+            <h1>About Jason</h1>
+
+        <div class="about_row">
+            <div class="about_row_left">
+                <img src="image/about.jpg" alt="">
+            </div>  
+
+            <div class="about_row_right">
+                <div class="about_text">
+                    <p>I'm Jason Shiu, live in Kaohsiung Taiwan. <br>
+                        Master degree of Chemical Engineering, <br>
+                       Graduated from Chung Yuan Christian University, <br>
+                       Experienced R&D and Marketing manager. <br><br>
+
+                       Believing that software industry is definitely <br>
+                       one of the fastest growing industries in Taiwan, <br>
+                       so I use my time off work to study programming<br>
+                       and understand software industry-related skills. <br><br>
+                        
+                       Up to now, I'm good at website interface development<br> 
+                       and continue to research software developed skills.</p>
+                </div>
+
+                <div class="about_cv">
+                    <a href="jason_resume.pdf" download="jason_resume">
+                        <button>Download Resume
+                            <i class="fas fa-cloud-download-alt"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <div id="term2"></div>                    
+    <!--================== EXPERIENCE ===================-->
+    <section class="exp">
+        <h2 class="section_title">Experience</h2>
+        <div class="exp_classify">
+            <h3>Position</h3>
+            <h3>Education</h3>
+        </div>
+
+        <div class="exp_wrap">
+            <ul class="exp_timeline">
+                <li>
+                    <a href="#">
+                        <h3 classs="exp_title">R&D Engineer</h3>
+                        <span class="exp_subtitle">Formosa Plastic Company</span>
+                        <div class="exp_time">2020 - Current</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <h3 classs="exp_title">Master of Chemical Engineering</h3>
+                        <span class="exp_subtitle">Chung Yuan Christian University</span>
+                        <div class="exp_time">2013 - 2015</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <h3 classs="exp_title">Marketing Manager</h3>
+                        <span class="exp_subtitle">Eternal Materials</span>
+                        <div class="exp_time">2015 - 2020</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <h3 classs="exp_title">Bachelor of Chemical Engineering</h3>
+                        <span class="exp_subtitle">Feng Chia University</span>
+                        <div class="exp_time">2009 - 2013</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+       
+    </section>
+    <div id="term3"></div>  
+<!--======================= SKILLS ======================-->
+    <section class="skills">
+        <h2 class="section_title">Skills</h2>
+        <span class="section_subtitle">My Technical Level</span>
+
+    <div class="skills_container">
+            <!--======================= SKILLS 1 ======================-->
+            <div class="skills_content">
+                <div class="skills_header">
+                    <i class="fas fa-pen-fancy skills_icon"></i>
+                    <div>
+                        <h1 class="skills_title">Marketing Manager</h1>
+                        <span class="skills_subtitle">About 4 year</span>
+                    </div>
+                    <button onclick="myfunction1()" class="skills_arrow1">
+                        <i class="fas fa-chevron-down "></i></button>
+                </div>
+
+                <div class="skills_list1" id="myDropdown1">
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Sales Skills</h3>
+                            <span class="skills_number">100%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_ss"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Marketing Survey</h3>
+                            <span class="skills_number">100%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_ms"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Pricing Negotiation</h3>
+                            <span class="skills_number">100%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_pn"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Product Presentation</h3>
+                            <span class="skills_number">90%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_pp"></span>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <!--======================= SKILLS 2 ======================-->
+            <div class="skills_content">
+                <div class="skills_header">
+                    <i class="fas fa-laptop-code skills_icon"></i>
+                    <div>
+                        <h1 class="skills_title">Frontend Website Designer</h1>
+                        <span class="skills_subtitle">About 1 year</span>
+                    </div>
+                    <button onclick="myfunction2()" class="skills_arrow2">
+                        <i class="fas fa-chevron-down"></i></button>
+                </div>
+
+                <div class="skills_list2" id="myDropdown2">
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">HTML</h3>
+                            <span class="skills_number">70%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_html"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">CSS</h3>
+                            <span class="skills_number">70%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_css"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Javascript</h3>
+                            <span class="skills_number">40%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_js"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Photoshop</h3>
+                            <span class="skills_number">65%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_photo"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Illustrator</h3>
+                            <span class="skills_number">65%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_ai"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Vue</h3>
+                            <span class="skills_number">10%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_vue"></span>
+                       </div>
+                    </div>
+
+                </div>
+            </div>
+        
+            <!--======================= SKILLS 3 ======================-->
+            <div class="skills_content">
+                <div class="skills_header">
+                    <i class="fas fa-globe-asia skills_icon"></i>
+                    <div>
+                        <h1 class="skills_title">Languages</h1>
+                    </div>
+                    <button onclick="myfunction3()" class="skills_arrow3">
+                        <i class="fas fa-chevron-down"></i></button>
+                </div>
+
+                <div class="skills_list3" id="myDropdown3">
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">English Speaking</h3>
+                            <span class="skills_number">85%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_en"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Mandarin & Taiwanese</h3>
+                            <span class="skills_number">100%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_mt"></span>
+                       </div>
+                    </div>
+
+                    <div class="skills_data">
+                        <div class="skills_title">
+                            <h3 class="skills_name">Japanese</h3>
+                            <span class="skills_number">5%</span>
+                        </div>
+                        <div class="skills_bar">
+                        <span class="skills_percentage skills_jp"></span>
+                       </div>
+                    </div>
+                </div>
+            </div> 
+    </div>   
+    </section>   
+    <div id="term4"></div>  
+<!--======================= Porfolio ======================-->
+    <section class="porfolio_section">
+        <h2 class="section_title">Porfolio</h2>
+        <span class="section_subtitle">Most recent work</span>
+
+       
+        <div class="por"></div> <!--fake-->
+
+    <div id="term5"></div> 
+<!--======================= Contact me ======================-->
+    <section class="contact">
+        <h2 class="section_title">Contact me</h2>
+        <span class="section_subtitle">Get in touch</span>
+
+        <div class="contact_container container grid">
+            <div class="contact_left">
+            <!--1--><div class="contact_information">
+                        <i class="fas fa-phone contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Call Me</h3>
+                            <span class="contact_subtitle">(+886) 0905-632-693</span>
+                        </div>
+                    </div>
+
+            <!--2--><div class="contact_information">
+                        <i class="fas fa-envelope contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Email</h3>
+                            <span class="contact_subtitle">jason20017@hotmail.com</span>
+                        </div>
+                    </div>
+
+            <!--3--><div class="contact_information">
+                        <i class="fas fa-map-marker-alt contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Location</h3>
+                            <span class="contact_subtitle">Kaohsiung Taiwan</span>
+                        </div>
+                    </div>
+            </div>
+
+            <form class="contact_form grid">
+                <div class="contact_inputs grid">
+                    <div class="contact_content">
+                        <label for="" class="contact_lebel">Name</label>
+                        <input type="text" class="contact_input">
+                    </div>
+                    
+                    <div class="contact_content">
+                        <label for="" class="contact_lebel">Email</label>
+                        <input type="email" class="contact_input">
+                    </div>
+                
+                    <div class="contact_content">
+                        <label for="" class="contact_lebel">Project</label>
+                        <input text="email" class="contact_input">
+                    </div>
+                    
+                    <div class="contact_content">
+                        <label for="" class="contact_lebel">Message</label>
+                        <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="" class="button">
+                        Send Message
+                        <i class="fas fa-paper-plane button_icon"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+<!--======================= FOOTER ======================-->
+<footer class="footer">
+    <div class="footer_bg">
+        <div class="footer_container">
+            <div class="footer_name">
+                <h1 class="footer_title">Jason</h1>
+            </div>
+
+            <ul class="footer_links">
+                <li>
+                    <a href="#term2" class="footer_link">Experience</a>
+                    <a href="#term3" class="footer_link">Skills</a>
+                    <a href="#term4" class="footer_link">Porfolio</a>
+                </li>
+            </ul>
+
+            <div class="footer_socials">
+                <a href="https://www.facebook.com/jason.hsu.3994" target="blank"><i class="fab fa-facebook-square fa-2x"></i></a> <!--直接從行內樣式修改icon大小-->
+                <a href="https://www.instagram.com/jasonhsu00011/" target="blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/%E8%A8%B1%E5%B1%95%E7%A6%8E-jason-73912916b/" target="blank"><i class="fab fa-linkedin fa-2x" ></i></a>
+            </div>
+        </div>
+
+        <p class="footer_copy">&#169; Star J Design </p>
+    </div>
+</footer>
+
+<!--=======================JS========================-->
+    <script>
+       $(function(){
+	        $('#BackTop').click(function(){ 
+		    $('html,body').animate({scrollTop:0}, 1);
+	        });
+        });
+           /*===當點擊這個按鈕時，自動捲動到網頁最上方，0.1秒完成捲動的動作===*/
+        
+    </script>
+
+    <script src="web.js"></script>
+    
+</body>
+</html>
