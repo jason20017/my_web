@@ -598,9 +598,71 @@ button:hover{
     display: block;
     margin-bottom: 350px;
 }
-.por{
+
+.porfolio_section{
     height:800px;
 }
+
+.porfolio_container{
+    width:1280px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:0 auto;
+}
+
+
+    .small{
+        width:50px;
+        position:relative;
+        padding:20px;
+    }
+
+    .small:first-child{ /*第一個小孩佔50%*/
+        width:50%;
+    }
+
+    .small:first-child~.small{ /*第一個小孩之後的所有small 都各佔25%*/
+        width:25%;
+        vertical-align: center;
+    }
+
+    .small img{  /*圖都已100%顯示*/
+        width:100%;
+        vertical-align: bottom; /*或者 middle 都可以消除上下兩層圖片間的縫隙*/
+    }
+
+    .small .text h2{
+        margin-bottom: 15px;
+        font-size:18px;
+        text-align: center;
+    }
+
+      .small .text{ /*做文字區塊的定位，跟文字的設定*/
+        position: absolute;
+        top:0;
+        left:0;
+        color:aliceblue;
+        line-height:1.5;
+        padding:0 60px;
+        /*半透明的部分*/
+        background-color:rgba(12, 11, 11, 0.6); 
+        width:100%; /*讓文字的黑幕部分，覆蓋整著small*/
+        height:100%;
+        box-sizing: border-box; /*讓黑幕別超過邊邊*/
+        /*文字垂直居中*/
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-justify: distribute;
+        opacity:0;
+        transform: scale(0);
+    }
+/*  .small:hover .text{
+        opacity:1;
+        transform: scale(1);
+        transition:0.3s ease-in-out;
+    } */
 
 
 
