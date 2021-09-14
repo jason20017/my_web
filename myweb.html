@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/29796258b5.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <!--使用Jquery 都須先加上面這行，在這專案中用來驅動回到頁首的功能-->
-    <link rel="stylesheet" href="style_revised.css">
+    <link rel="stylesheet" href="style_pc.css">
+    <link rel="stylesheet" href="style_tablet.css" media="(min-width:480px) and (max-width:1024px)">
+    <link rel="stylesheet" href="style_phone.css" media="(max-width:480px)">
     <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico" /> <!--favicon-->
     <title>Jason Shiu</title>
 
-    
+
 </head>
 <body>
 <!--======================= HEADER ======================-->
     <header class="header">
+        <label for="menu_control" class="menu_button"></label>
        <div class="logo" id="BackTop">Jason</div>
-       <nav>
-           <ul class="nav_link mx-auto">
-               <li> <a href="#term1">About Jason</a> </li>
-               <li> <a href="#term2">Experience</a> </li>
-               <li> <a href="#term3">Skills</a> </li>
-               <li> <a href="#term4">Porfolio</a> </li>
-               <li> <a href="#term5">Contact me</a> </li>
-           </ul>
-       </nav>
+         
+            <nav class="open">
+                <ul class="nav_link">
+                    <li> <a href="#term1">About Jason</a> </li>
+                    <li> <a href="#term2">Experience</a> </li>
+                    <li> <a href="#term3">Skills</a> </li>
+                    <li> <a href="#term4">Porfolio</a> </li>
+                    <li> <a href="#term5">Contact me</a> </li>
+                </ul>
+            </nav>
 
-       <div class="icon">
-       <a href="https://www.facebook.com/jason.hsu.3994" target="blank" ><i class="fab fa-facebook-square fa-2x"></i></a>
-       <a href="https://www.instagram.com/jasonhsu00011/" target="blank"><i class="fab fa-instagram-square fa-2x"></i></a>
-       <a href="https://www.linkedin.com/in/%E8%A8%B1%E5%B1%95%E7%A6%8E-jason-73912916b/" target="blank"><i class="fab fa-linkedin fa-2x" ></i></a>
-       </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/jason.hsu.3994" target="blank" ><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.instagram.com/jasonhsu00011/" target="blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/%E8%A8%B1%E5%B1%95%E7%A6%8E-jason-73912916b/" target="blank"><i class="fab fa-linkedin fa-2x" ></i></a>
+            </div>
+
     </header>
 
     <!--======================= HOME ======================-->
@@ -39,14 +45,10 @@
             <div class="home_row_left">
                 <div class="home_row_left_content">
                     <h2>Jason Shiu</h2>
-                    <h3>Frontend Developer /Website Designer</h3>
-                    <p>Your best solution of brand website for business promotion <br>
-                       My professional website building and marketing research </p>            
-                    <div class="button">
-                        <button>
-                            <a href="#term5">Contact me<i class="fas fa-paper-plane"></i></a>
-                        </button>    
-                    </div>
+                    <h3>Frontend Developer <br>Website Designer</h3>
+                    <p>Your best solution of brand website for business promotion. <br>
+                    My professional website building and marketing research. </p>            
+                    
                 </div>
             </div>
 
@@ -54,6 +56,12 @@
                 <img src="image/headshot.jpg" alt="">
 
             </div>
+        </div>
+
+        <div class="button">
+            <button>
+                <a href="#term5">Contact me<i class="fas fa-paper-plane"></i></a>
+            </button>    
         </div>
     </section>
     <div id="term1"></div>
@@ -93,7 +101,7 @@
         </div>
     </section>    
     <div id="term2"></div>                    
-    <!--================== EXPERIENCE ===================-->
+<!--================== EXPERIENCE ===================-->
     <section class="exp">
         <h2 class="section_title">Experience</h2>
         <div class="exp_classify">
@@ -103,38 +111,97 @@
 
         <div class="exp_wrap">
             <ul class="exp_timeline">
-                <li>
-                    <a href="#">
+                <li class="exp_1">
+                    <a href="javascript: void(0)"> <!--javascript: void(0)使a不會自動連結或跑到網頁上方-->
                         <h3 classs="exp_title">R&D Engineer</h3>
                         <span class="exp_subtitle">Formosa Plastic Company</span>
                         <div class="exp_time">2020 - Current</div>
                     </a>
                 </li>
-
-                <li>
-                    <a href="#">
+               
+                <li class="exp_2">
+                    <a href="javascript: void(0)">
                         <h3 classs="exp_title">Master of Chemical Engineering</h3>
                         <span class="exp_subtitle">Chung Yuan Christian University</span>
                         <div class="exp_time">2013 - 2015</div>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="exp_3">
+                    <a href="javascript: void(0)">
                         <h3 classs="exp_title">Marketing Manager</h3>
                         <span class="exp_subtitle">Eternal Materials</span>
                         <div class="exp_time">2015 - 2020</div>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="exp_4">
+                    <a href="javascript: void(0)">
                         <h3 classs="exp_title">Bachelor of Chemical Engineering</h3>
                         <span class="exp_subtitle">Feng Chia University</span>
                         <div class="exp_time">2009 - 2013</div>
                     </a>
                 </li>
             </ul>
+
+            <div class = "modal1 hide">
+                <div class="modal_frame">
+                    <h3>R&D Engineer</h3>
+                    <div class="modal_img">
+                        <img src="image/formosa.jpg" >
+                    </div>
+                    <div class="modal_text">
+                        <p>
+                            •	Responsible for PVC film production/ printing/<br> &nbsp; embossing process optimization.<br>
+                            •	Heads weekly meeting with all team to discuss new<br> &nbsp; project and testing schedule.<br>
+                            •	Handles the component of projects for over 15<br> &nbsp; developing cases and follow up customer’s<br> &nbsp; feedback.<br>
+                             
+                        </p>
+                    </div>     
+                    <a class="close"><i class="far fa-times-circle"></i></a>
+                </div>
+            </div>
+
+            <div class = "modal3 hide">
+                <div class="modal_frame">
+                    <h3>Marketing manager</h3>
+                    <div class="modal_img">
+                        <img src="image/ETERNAL.jpg" >
+                    </div>
+                    <div class="modal_text">
+                        <p>
+                            • The first Taiwanese Marketing Manager station in <br> &nbsp;  Jakarta to develop Indonesia marketing. <br>
+                            • Achieved the sales goal 10% rising and developed<br> &nbsp; over   40 new clients. <br>
+                            • Led company to the biggest client supply chain,<br> &nbsp; with 1200 tons purchase orders in year to come. <br>
+                            • Created product presentations to enable training <br> &nbsp; local sales employees and agents to sell the <br> &nbsp; suitable products to end customer. <br>
+                            
+                        </p>
+                    </div>     
+                <a class="close"><i class="far fa-times-circle"></i></a>
+                </div>
+            </div>
+
+            <div class = "modal2 hide">
+                <div class="modal_frame">
+                <h3>Master of Chemical Engineering</h3>
+                <div class="modal_img">
+                    <img src="image/CYCU.jpg" >
+                </div>
+                <p></p>
+                <a class="close"><i class="far fa-times-circle"></i></a>
+                </div>
+            </div>
+
+            <div class = "modal4 hide">
+                <div class="modal_frame">
+                <h3>Bachelor of Chemical Engineering</h3>
+                <div class="modal_img">
+                    <img src="image/FCU.jpg" >
+                </div>
+                <p></p>
+                <a class="close"><i class="far fa-times-circle"></i></a>
+                </div>
+            </div>
         </div>
        
     </section>
@@ -142,18 +209,18 @@
 <!--======================= SKILLS ======================-->
     <section class="skills">
         <h2 class="section_title">Skills</h2>
-        <span class="section_subtitle">My Technical Level</span>
+        <span class="section_subtitle"></span>
 
     <div class="skills_container">
             <!--======================= SKILLS 1 ======================-->
             <div class="skills_content">
-                <div class="skills_header">
+                <div class="skills_header" onclick="myfunction1()">
                     <i class="fas fa-pen-fancy skills_icon"></i>
                     <div>
                         <h1 class="skills_title">Marketing Manager</h1>
                         <span class="skills_subtitle">About 4 year</span>
                     </div>
-                    <button onclick="myfunction1()" class="skills_arrow1">
+                    <button class="skills_arrow1">
                         <i class="fas fa-chevron-down "></i></button>
                 </div>
 
@@ -201,13 +268,13 @@
             </div>
             <!--======================= SKILLS 2 ======================-->
             <div class="skills_content">
-                <div class="skills_header">
+                <div class="skills_header" onclick="myfunction2()">
                     <i class="fas fa-laptop-code skills_icon"></i>
                     <div>
                         <h1 class="skills_title">Frontend Website Designer</h1>
                         <span class="skills_subtitle">About 1 year</span>
                     </div>
-                    <button onclick="myfunction2()" class="skills_arrow2">
+                    <button class="skills_arrow2">
                         <i class="fas fa-chevron-down"></i></button>
                 </div>
 
@@ -215,7 +282,7 @@
                     <div class="skills_data">
                         <div class="skills_title">
                             <h3 class="skills_name">HTML</h3>
-                            <span class="skills_number">70%</span>
+                            <span class="skills_number">90%</span>
                         </div>
                         <div class="skills_bar">
                         <span class="skills_percentage skills_html"></span>
@@ -225,7 +292,7 @@
                     <div class="skills_data">
                         <div class="skills_title">
                             <h3 class="skills_name">CSS</h3>
-                            <span class="skills_number">70%</span>
+                            <span class="skills_number">90%</span>
                         </div>
                         <div class="skills_bar">
                         <span class="skills_percentage skills_css"></span>
@@ -235,7 +302,7 @@
                     <div class="skills_data">
                         <div class="skills_title">
                             <h3 class="skills_name">Javascript</h3>
-                            <span class="skills_number">40%</span>
+                            <span class="skills_number">80%</span>
                         </div>
                         <div class="skills_bar">
                         <span class="skills_percentage skills_js"></span>
@@ -277,12 +344,13 @@
         
             <!--======================= SKILLS 3 ======================-->
             <div class="skills_content">
-                <div class="skills_header">
+                <div class="skills_header" onclick="myfunction3()">
                     <i class="fas fa-globe-asia skills_icon"></i>
                     <div>
                         <h1 class="skills_title">Languages</h1>
+                        <span class="skills_subtitle"> &nbsp; </span>
                     </div>
-                    <button onclick="myfunction3()" class="skills_arrow3">
+                    <button  class="skills_arrow3">
                         <i class="fas fa-chevron-down"></i></button>
                 </div>
 
@@ -324,49 +392,46 @@
 <!--======================= Porfolio ======================-->
     <section class="porfolio_section">
         <h2 class="section_title">Porfolio</h2>
-        <span class="section_subtitle">Most recent work</span>
+        <span class="section_subtitle"></span>
 
+        <!--image slider-->
     <div class="porfolio_container">
-        <div class="small">
-            <img src="image/shining_moon.jpg" alt="">
-            <div class="text">
-                <h2>2020</h2>
-                <p></p>
-            </div>    
-        </div>
+        <div class="slider">
+            <div class="slides">
+                <!--radio buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <!--slide images-->
+                <div class="slide first"><img src="image/shining_moon.jpg"></div>
 
-        <div class="small">
-            <img src="image/deer.jpg" alt="">
-            <div class="text">
-                <h2></h2>
-                <p></p>
-            </div>    
-        </div>
+                <div class="slide "><img src="image/moon_man.jpg"></div>
 
-        <div class="small">
-            <img src="image/moon_man.jpg" alt="">
-            <div class="text">
-                <h2></h2>
-                <p></p>
-            </div>    
-        </div>
+                <div class="slide "><img src="image/deer.jpg"></div>
 
-        <div class="small">
-            <img src="image/LOGO design.jpg" alt="">
-            <div class="text">
-                <h2></h2>
-                <p></p>
-            </div>    
-        </div>
+                <div class="slide "><img src="image/Logo 1.jpg" ></div>
 
-        <div class="small">
-            <img src="image/Logo 1.jpg" alt="">
-            <div class="text">
-                <h2></h2>
-                <p></p>
-            </div>    
+                <div class="slide "><img src="image/LOGO design.jpg"></div>
+                <!--automatic navigation-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+                <!--manual navigation-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                </div>
+            </div>
         </div>
-
     </div> 
   </section>
   
@@ -374,7 +439,7 @@
 <!--======================= Contact me ======================-->
     <section class="contact">
         <h2 class="section_title">Contact me</h2>
-        <span class="section_subtitle">Get in touch</span>
+     
 
         <div class="contact_container container grid">
             <div class="contact_left">
@@ -382,7 +447,7 @@
                         <i class="fas fa-phone contact_icon"></i>
                         <div>
                             <h3 class="contact_title">Call Me</h3>
-                            <span class="contact_subtitle">(+886) 0905-632-693</span>
+                            <span class="contact_subtitle"></span>
                         </div>
                     </div>
 
@@ -416,7 +481,7 @@
                     </div>
                 
                     <div class="contact_content">
-                        <label for="" class="contact_lebel">Project</label>
+                        <label for="" class="contact_lebel">Title</label>
                         <input text="email" class="contact_input">
                     </div>
                     
@@ -427,7 +492,7 @@
                 </div>
 
                 <div>
-                    <a href="" class="button">
+                    <a href="javascript: void(0)" class="button">
                         Send Message
                         <i class="fas fa-paper-plane button_icon"></i>
                     </a>
@@ -464,17 +529,11 @@
 </footer>
 
 <!--=======================JS========================-->
-    <script>
-       $(function(){
-	        $('#BackTop').click(function(){ 
-		    $('html,body').animate({scrollTop:0}, 1);
-	        });
-        });
-           /*===當點擊這個按鈕時，自動捲動到網頁最上方，0.1秒完成捲動的動作===*/
-        
-    </script>
-
+  
     <script src="web.js"></script>
+
+<!--=======================Jquery for Modal========================-->
+
     
 </body>
 </html>
