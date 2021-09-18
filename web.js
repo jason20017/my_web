@@ -37,12 +37,11 @@ menuBtn.addEventListener('click', () =>{
     open.style.transition='0.5s ease-in-out';
     Switch = true;
     } else {
-    open.style.top='-100%';
+    open.style.top='-600%';
     open.style.transition='0.5s ease-in-out';
     Switch = false;
     }
 })
-
 
 /*回到首頁的JavaScript*/
 /*===當點擊這個按鈕時，自動捲動到網頁最上方===*/
@@ -51,14 +50,13 @@ menuBtn.addEventListener('click', () =>{
      window.scrollTo({ top: 0});
  })
 
-
  /*skill 開關*/
 function myfunction1(){
     document.getElementById("myDropdown1").classList.toggle("show");
 }; /*案件觸發function ，檢索要開啟的內容，並且控制show*/
 
 window.onclick = function(event){
-    if (event.target.matches('.skills_header')){  /*觸發按鈕*/
+    if (!event.target.matches('.skills_header')){  /*觸發按鈕*/
         var dropdowns = document.getElementbyClassname("skills_list1")/*檢索要開啟的內容*/
         var i;
         for (i = 0; i<dropdowns.length; i++){
@@ -67,8 +65,10 @@ window.onclick = function(event){
                 openDropdown.classList.remove('show');
             }
         }
-    } 
+    }
 }
+
+
 
 function myfunction2(){
     document.getElementById("myDropdown2").classList.toggle("show");
@@ -103,6 +103,8 @@ window.onclick = function(event){
         }
     } 
 }
+
+
 
 /*Experience Modal pop-up*/
 //modal1

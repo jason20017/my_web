@@ -48,18 +48,24 @@ nav a {
 }
 
 /*處理nav*/
-.nav_link {
+.open {
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /*height: 100vh; /*自動符合視窗(viewport)的高(height)*/
-  height: 50vh;
+  height: 35vh;
   background-color: rgb(58, 58, 58);
   /*用定位讓他下來，定住header*/
   position: absolute;
-  top: -100%; /*畫面最初先隱藏起來，按按鈕之後才會出現*/
+  top: -600%; /*畫面最初先隱藏起來，按按鈕之後才會出現*/
   z-index: -5;
+}
+
+.nav_link {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 
 /*==============HEADER NAVBAR===============*/
@@ -95,6 +101,7 @@ header {
 .nav_link li {
   padding: 0 20px;
   margin-top: 10px;
+  text-align: center;
 }
 
 .nav_link li a {
@@ -121,6 +128,7 @@ header {
   padding: 0 30px;
   transition: 0.5s;
   color: antiquewhite;
+  display: none;
 }
 
 .fa-facebook-square:hover {
@@ -145,44 +153,57 @@ header {
 
 /*=========== HOME ==============*/
 
+.home {
+  margin-bottom: 40rem;
+}
+
 .home_row {
   display: flex;
   justify-content: center;
   margin-top: 10rem;
+  position: relative;
 }
 
 .home_row_left {
-  width: 600px;
-  height: 650px;
+  position: absolute;
+  top: 12rem;
+  width: 20rem;
+  height: 20rem;
   overflow: hidden;
   /*border: 3px solid black;*/
-  text-align: start;
+  text-align: center;
   line-height: 1.2;
 }
 
 .home_row_left_content {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .home_row_left_content h2 {
-  font-size: 50px;
-  text-align: right;
+  font-size: 42px;
+  text-align: center;
 }
 
 .home_row_left_content h3 {
-  font-size: 26px;
-  text-align: right;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .home_row_left_content p {
   font-size: 20px;
-  text-align: right;
+  text-align: center;
   padding: 20px 0;
 }
 
 .home_row_right {
-  width: 400px;
-  height: 400px;
+  position: absolute;
+  top: -5rem;
+  width: 20rem;
+  height: 20rem;
+  text-align: center;
   margin-left: 30px;
 }
 
@@ -204,9 +225,13 @@ header {
 }
 
 .home .button {
-  text-align: center;
-  margin-top: -18rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 38rem;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .home .button button {
@@ -221,7 +246,7 @@ header {
 
 /*nbsp*/
 #nbsp {
-  margin: 10rem 0;
+  margin: 0;
 }
 /*=================== ABOUT=================*/
 #term1 {
@@ -240,43 +265,46 @@ header {
 }
 
 .about_row {
-  width: 1024px;
+  width: 476px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: 20px 0;
-  padding-right: 0px;
+  padding: 15px 0;
+  padding-right: 2rem;
   text-align: center;
 }
 /*調整相框大小，overflow把超出相框的照片隱藏起來*/
 .about_row_left {
-  width: 700px;
-  height: 500px;
-  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
   border: 2px soild black;
 }
 /*調整相片的位置，即可達到裁切相片、移動照片的效果*/
 .about_row_left img {
-  width: 150%;
-  margin-left: 0rem;
+  width: 160%;
 }
 
 .about_row_right {
-  width: 800px;
-  height: 600px;
+  width: 30rem;
+  height: 30rem;
   overflow: hidden;
-  padding-left: 10px;
+  padding-left: 3.5rem;
+  margin-top: -2rem;
 }
 
 .about_text p {
   text-align: left;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about_cv {
-  text-align: left;
+  text-align: center;
+  margin-top: -1rem;
+  margin-right: 5rem;
 }
 
 .about_cv button {
@@ -313,54 +341,57 @@ header {
 }
 
 .exp_classify h3 {
+  display: none;
   font-size: 26px;
   margin-right: 150px;
   padding-left: 126px;
 }
 
 .exp_wrap {
-  width: 980px;
   margin: 0 auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .exp_timeline {
+  position: relative;
   padding: 0;
 }
 
 .exp_timeline h3 {
-  font-size: 26px;
+  font-size: 18px;
   color: rgb(12, 88, 151);
 }
 
 .exp_timeline span {
-  font-size: 20px;
+  font-size: 16px;
   color: rgb(173, 19, 7);
   line-height: 1.6;
 }
 
 .exp_timeline li {
   list-style-type: none;
-  width: 50%;
+  text-align: center;
+  width: 37%;
   padding: 3px 0;
-  box-sizing: border-box; /*不加這個會超過總寬，所以會壞掉*/
-  /*之後做了定位才回來加*/
-  position: relative;
 }
 
 .exp_timeline li:nth-child(odd) {
   float: left;
   padding-right: 100px;
-  transform: translateY(-20%);
+  transform: translateY(-10%) translateX(14%);
 }
 
 .exp_timeline li:nth-child(even) {
   float: right;
   padding-left: 100px;
-  transform: translateY(100%);
+  transform: translateY(193%) translateX(-179%);
 }
 
-.exp_timeline a {
+.exp_4 {
+  margin-bottom: 45px;
+}
+
+.exp_timeline li a {
   text-decoration: none;
   background-color: #fff; /*之後要做hover*/
   /*邊框*/
@@ -386,12 +417,10 @@ header {
 /*中間線*/
 /*原本檔案偷懶的寫法是：.timeline li::after*/
 .exp_timeline li:nth-child(odd)::after {
+  display: none;
   content: "";
   position: absolute;
   top: 0;
-  width: 3px;
-  height: 250%;
-  background-color: rgb(173, 19, 7);
   right: 0;
   z-index: -2; /*將線至於最下層*/
 }
@@ -399,17 +428,16 @@ header {
 /*點點*/
 
 .exp_timeline li::before {
+  display: none;
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 0;
+  height: 0;
   border-radius: 50%;
   background-color: teal;
   z-index: 0; /*將小球推到最上層，不會被線擋住*/
   top: 0;
   bottom: 0;
-  margin: auto;
-  box-shadow: 2px 2px 5px black;
 }
 
 .exp_timeline li:nth-child(odd)::before {
@@ -423,6 +451,7 @@ header {
 /*橫線*/
 
 .exp_timeline h3::after {
+  display: none;
   content: "";
   position: absolute;
   width: 100px;
@@ -460,9 +489,8 @@ header {
 .modal_frame {
   border-radius: 10px;
   background-color: rgb(58, 56, 56);
-  width: 500px;
-  height: 600px;
-  padding: 50px 0;
+  width: 425px;
+  height: 550px;
   margin-top: 5rem;
   position: relative;
 }
@@ -472,9 +500,9 @@ header {
 .modal3 h3,
 .modal4 h3 {
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1;
   padding-bottom: 20px;
 }
 
@@ -485,11 +513,11 @@ header {
 
 .modal_img img {
   width: 100%;
-  height: 200px;
+  height: 150px;
 }
 
 .modal_text {
-  padding: 16px;
+  padding: 10px;
 }
 
 .modal1,
@@ -497,7 +525,8 @@ header {
 .modal3,
 .modal4 p {
   color: #fff;
-  font-size: 20px;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .modal1 a,
@@ -529,9 +558,9 @@ header {
 }
 
 .skills_container {
-  width: 1024px;
+  width: 476px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   margin: 0 auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -555,7 +584,7 @@ header {
 .skills_arrow1,
 .skills_arrow2,
 .skills_arrow3 {
-  padding-left: 4rem;
+  padding-right: 4rem;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -597,13 +626,14 @@ header {
 .skills_list1,
 .skills_list2,
 .skills_list3 {
-  display: block;
+  display: none;
   row-gap: 1.5rem;
   padding-left: 1rem;
+  padding-right: 4rem;
 }
 
 .show {
-  display: none;
+  display: block;
 }
 /*可以將上面的display:block 與none調換，變成一開始關閉*/
 
@@ -687,7 +717,7 @@ header {
 /*============Porfolio=========*/
 #term4 {
   display: block;
-  margin-bottom: 350px;
+  margin-bottom: 300px;
 }
 
 .porfolio_section {
@@ -702,10 +732,11 @@ header {
 }
 
 .slider {
-  width: 700px;
-  height: 450px;
+  width: 476px;
+  height: 50vh;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 10vh;
 }
 
 .slides {
@@ -724,15 +755,15 @@ header {
 }
 
 .slide img {
-  width: 700px;
-  height: 450px;
+  width: 100%;
+  height: 50vh;
 }
 
 /*css for manual slide navigation*/
 .navigation-manual {
   position: absolute;
-  width: 700px;
-  margin-top: 480px;
+  width: 476px;
+  margin-top: 400px;
   display: flex;
   justify-content: center;
 }
@@ -778,9 +809,9 @@ header {
 .navigation-auto {
   position: absolute;
   display: flex;
-  width: 700px;
+  width: 476px;
   justify-content: center;
-  margin-top: 480px;
+  margin-top: 400px;
 }
 
 .navigation-auto div {
@@ -813,12 +844,11 @@ header {
 #radio5:checked ~ .navigation-auto .auto-btn5 {
   background-color: #40d3dc;
 }
-
 /*============Contact me=========*/
 
 #term5 {
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .contact {
@@ -830,36 +860,39 @@ header {
 
 .contact_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 2rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact_left {
-  margin-right: 20px;
+  margin-right: 0px;
 }
 .contact_form {
-  margin-left: 20px;
+  margin: 0 auto;
 }
 
 .contact_information {
   display: flex;
-  padding: 2rem 0;
+  justify-content: start;
+  margin-left: 7rem;
+  padding: 0.5rem 0;
 }
 
 .contact_icon {
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgb(20, 53, 160);
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .contact_title {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .contact_subtitle {
-  font-size: 16px;
+  font-size: 20px;
   color: black;
 }
 
@@ -876,23 +909,26 @@ header {
 }
 
 .contact_input {
-  width: 100%;
+  width: 25rem;
   color: black;
   font-size: 20px;
-  border: 1px solid black;
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
+  margin: 0 auto;
 }
 
 form a {
   /*button*/
+  width: 20rem;
   display: block;
   font-size: 24px;
   text-align: center;
   text-decoration: none;
   color: black;
   padding: 5px;
-  margin: 2rem 0;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   border: 2px solid black;
   border-radius: 35px;
   box-shadow: 3px 3px 10px black;
@@ -923,9 +959,11 @@ form a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  position: relative;
 }
 
 .footer_name {
+  display: none;
   position: absolute;
   left: 50px;
   color: antiquewhite;
@@ -944,14 +982,8 @@ form a:active {
   cursor: pointer;
 }
 
-.footer_links li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 13px;
-}
-
 .footer_link {
+  display: none;
   text-decoration: none;
   list-style: none;
   font-size: 24px;
@@ -966,19 +998,19 @@ form a:active {
 }
 
 .footer_socials {
-  margin-top: 10px;
+  padding-top: 0.5rem;
   position: absolute;
-  right: 3px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .footer_socials a {
   padding: 0 15px;
   color: antiquewhite;
-}
-
-.footer_socials a:hover {
-  color: rgba(24, 119, 242, 0.8);
-  transition: 0.5s;
 }
 
 .footer_socials a:active {
@@ -990,5 +1022,6 @@ form a:active {
   font-size: 16px;
   text-align: center;
   color: white;
-  margin-top: 5px;
+  margin-top: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
